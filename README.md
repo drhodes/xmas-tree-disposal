@@ -41,7 +41,7 @@ This project is set up to deploy as a [JupyterLite](https://jupyterlite.readthed
 
 > **`https://<your-username>.github.io/jupyterlite-exercise/`**
 
-Open that URL, then click `christmas_tree_disposal.ipynb` in the file browser to start.
+Opening that URL will directly open the notebook and kick off the JupyterLite instance.
 
 ### Enable GitHub Pages
 
@@ -55,6 +55,7 @@ Open that URL, then click `christmas_tree_disposal.ipynb` in the file browser to
 ```bash
 pip install -r requirements.txt
 jupyter lite build --contents content --output-dir dist
+cp index.html dist/index.html
 # Serve dist/ with any static file server, e.g.:
 python -m http.server -d dist
 ```
